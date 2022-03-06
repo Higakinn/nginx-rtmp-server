@@ -1,6 +1,11 @@
 version: "3"
 services:
   nginx-rtmp:
-    image: tiangolo/nginx-rtmp
+    build:
+      context: .
     ports:
       - 1935:1935
+      - 8088:80
+      - 443:443
+    # entrypoint: >
+    #   sleep 86400
